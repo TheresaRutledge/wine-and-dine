@@ -1,0 +1,15 @@
+.homepage-search{
+    background-image: url('./homepage-background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
+}
+
+form{
+    background-color: grey;
+    height:75px;
+    width:50%;
+    border-radius: 15px;
+}
+
