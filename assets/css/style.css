@@ -1,15 +1,104 @@
-.homepage-search{
-    background-image: url('assets/images/homepage-background.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 500px;
-}
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
 
-form{
-    background-color: grey;
-    height:75px;
-    width:50%;
-    border-radius: 15px;
-}
-
+ nav ul a,
+ nav .brand-logo {
+   color: #444;
+ }
+ 
+ p {
+   line-height: 2rem;
+ }
+ 
+ .btn-btn-primary-rounded {
+   color:black;
+ }
+ 
+ .content-wrapper{
+   background-color: #000;
+ }
+ 
+ .menu-item {
+   color: white;
+ }
+ 
+ h2 {
+   color: white
+ }
+ 
+ .content {
+   justify-content: center;
+   padding-right: 3vw;
+   padding-left: 3vw;
+   display: flex;
+   font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+     font-weight: 400;
+     font-family: freight-text-pro;
+     font-weight: 300;
+     font-style: normal;
+     letter-spacing: 0em;
+     text-transform: none;
+ }
+ 
+ .menu-item {
+   font-size: 20px;
+   align-content: center;
+ }
+ 
+ .sidenav-trigger {
+   color: #e9a21f;
+ }
+ 
+ form{
+   background-color: grey;
+   height:75px;
+   width:50%;
+   border-radius: 15px;
+ }
+ 
+ h1{
+   color: white;
+ }
+ 
+ .parallax-container {
+   min-height: 380px;
+   line-height: 0;
+   height: auto;
+   color: rgba(255,255,255,.9);
+ }
+   .parallax-container .section {
+     width: 100%;
+   }
+ 
+ @media only screen and (max-width : 992px) {
+   .parallax-container .section {
+     position: absolute;
+     top: 40%;
+   }
+   #index-banner .section {
+     top: 10%;
+   }
+ }
+ 
+ @media only screen and (max-width : 600px) {
+   #index-banner .section {
+     top: 0;
+   }
+ }
+ 
+ .icon-block {
+   padding: 0 15px;
+ }
+ .icon-block .material-icons {
+   font-size: inherit;
+ }
+ 
+ footer.page-footer {
+   margin: 0;
+ }
+ 
