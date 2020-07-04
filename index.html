@@ -14,30 +14,34 @@
 </head>
 
 <body>
-
-<!-- NAV BAR SECTION -->
+  <!-- NAV BAR SECTION -->
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
+      <!-- Logo -->
       <a id="logo-container" href="#" class="brand-logo">Wine & Dine</a>
+      <!-- NavBar Main on Right-->
       <ul class="right hide-on-med-and-down">
         <li><a href="#">Navbar Link</a></li>
       </ul>
-
+      <!-- NavBar for Mobile on Left-->
       <ul id="nav-mobile" class="sidenav">
         <li><a href="#">Navbar Link</a></li>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
   </nav>
-  
-<!-- MAIN SECTION -->
+
+  <!-- MAIN SECTION -->
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
+        <!-- Main Tagline -->
         <h1 class="header center light">Whats for Dinner?</h1>
         <div class="row center">
+          <!-- Main Description Text-->
           <h5 class="header col s12">Our website pairs different types of wine depending on your dinner selection</h5>
+          <!-- Search Bar -->
           <form class="col s12">
             <div class="row">
               <div class="input-field col s6">
@@ -45,19 +49,94 @@
                 <label for="first_name">First Name</label>
               </div>
             </div>
+            <!-- Submit Button-->
             <button class='btn btn-primary orange lighten-2' type='submit'>Submit</button>
+          </form>
         </div>
         <br><br>
 
       </div>
     </div>
+    <!-- Vineyard Image Background -->
     <div class="parallax"><img src="./assets/images/homepage-background.jpg" alt="Unsplashed background img 1"></div>
   </div>
 
+  <!--- WINE CARD SECTION -->
+  <div class="wine-grid container">
+    <div class="card">
+      <div class="wine-bottle-container section white">
+        <div class="row">
+          <!-- Wine Card 1 -->
+          <div class="col s12 m6 l3">
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="./assets/images/winebottle.jpg">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Option 1
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Option 1<i
+                    class="material-icons right">close</i></span>
+                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Wine Card 2 -->
+          <div class="col s12 m6 l3">
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="./assets/images/winebottle.jpg">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Option 2
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Option 2<i
+                    class="material-icons right">close</i></span>
+                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Wine Card 3 -->
+          <div class="col s12 m6 l3">
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="./assets/images/winebottle.jpg">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Option 3
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Option 3<i
+                    class="material-icons right">close</i></span>
+                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Wine Card 4 -->
+          <div class="col s12 m6 l3">
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="./assets/images/winebottle.jpg">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Option 4
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Option 4<i
+                    class="material-icons right">close</i></span>
+                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <!-- Recommendations Start -->
-  <div class="content-wrapper" style="">
-
+  <!-- RECOMMENDATION SECTION -->
+  <div class="content-wrapper">
     <div class="content">
       <div class="sqs-layout sqs-grid-12 columns-12" data-type="page-section"
         id="page-section-5d9b8e32ee4c1a6a6957e7b0">
@@ -65,9 +144,11 @@
           <div class="col sqs-col-12 span-12">
             <div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-ece90328df048d3dec51">
               <div class="sqs-block-content">
+                <!-- Recommendation Text -->
                 <h2>Some of Our Favorites</h2>
               </div>
             </div>
+            <!-- Food Description Container -->
             <div class="sqs-block menu-block sqs-block-menu" data-block-type="18" id="block-76bdf4a873f7f0c42d62">
               <div class="sqs-block-content">
                 <div class="menu-wrapper menu-style-classic">
@@ -80,6 +161,7 @@
                       <div class="menu-section">
                         <div class="menu-items">
                           <div class="menu-item">
+                            <!-- Food Description -->
                             <div class="menu-item-title">Steak & Cabernet Sauvignon</div>
                           </div>
                           <div class="menu-item">
@@ -88,23 +170,32 @@
                           <div class="menu-item">
                             <div class="menu-item-title">Pasta & Primitivo</div>
                           </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-                          <br><br>
-                          <footer class="page-footer teal">
-                            <div class="footer-copyright">
-                              <div class="container">
-                                Made by <a class="brown-text text-lighten-3"
-                                  href="http://materializecss.com">Materialize</a>
-                              </div>
-                            </div>
-                          </footer>
+  <!-- FOOTER SECTION -->
+  <footer class="page-footer teal">
+    <div class="footer-copyright">
+      <div class="container">
+        @2020 Made By<a class="brown-text text-lighten-3" href="http://materializecss.com">Team 5</a>
+      </div>
+    </div>
+  </footer>
 
-                          <!-- Scripts -->
-                          <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-                          <!-- Compiled and minified JavaScript -->
-                          <script
-                            src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-                          <script src="./assets/js/script.js"></script>
+  <!-- JavaScript -->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
