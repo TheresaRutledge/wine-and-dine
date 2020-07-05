@@ -61,12 +61,41 @@
     <div class="parallax"><img src="./assets/images/homepage-background.jpg" alt="Unsplashed background img 1"></div>
   </div>
 
-  <!--- WINE CARD SECTION -->
+  <!-- FOOD / WINE INPUT SECTION -->
   <br>
-  <!-- MAIN FOOD CHOICE -->
+  <div class="container">
+    <div class="row item-selector">
+      <!-- Food Selector -->
+      <div class="col s12 m6 white">
+        <select class="icons">
+          <option value="" disabled selected>What are you having for Dinner?</option>
+          <option value="" data-icon="images/sample-1.jpg">Beef</option>
+          <option value="" data-icon="images/sample-2.jpg">Chicken</option>
+          <option value="" data-icon="images/sample-3.jpg">Pork</option>
+          <option value="" data-icon="images/sample-4.jpg">Fish</option>
+          <option value="" data-icon="images/sample-5.jpg">Cheese</option>
+        </select>
+        <!-- <label>Images in select</label> -->
+      </div>
+      <!-- Wine Selector -->
+      <div class="col s12 m6 white">
+        <select class="icons">
+          <option value="" disabled selected>What kind of wine do you prefer?</option>
+          <option value="" data-icon="images/sample-6.jpg" class="left">White Wine</option>
+          <option value="" data-icon="images/sample-7.jpg" class="left">Red Wine</option>
+          <option value="" data-icon="images/sample-8.jpg" class="left">Rose Wine</option>
+          <option value="" data-icon="images/sample-9.jpg" class="left">Dessert Wine</option>
+          <option value="" data-icon="images/sample-10.jpg" class="left">Sparkling Wine</option>
+        </select>
+        <!-- <label>Images in select</label> -->
+      </div>
+    </div>
+  </div>
+
+  <!--- WINE CARD SECTION / FOOD CHOICE  -->
   <div class="container grey">
     <div class="row">
-      <div class="col s12 m6 l6 grey">
+      <div class="col s12 m6 l6">
         <div class="card">
           <div class="card-image waves-effect waves-block waves-light">
             <!-- Food Image -->
@@ -78,35 +107,38 @@
           <div class="card-content">
             <span class="card-title wine-name activator grey-text text-darken-4">Food Name</span>
           </div>
-          <!-- Reveal FoodCard Section -->
+          <!-- Reveal Food Card Section -->
           <div class="card-reveal food-reveal">
             <span class="card-title grey-text text-darken-4">Food Name<i class="material-icons right">close</i></span>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque consequatur, quam quis quae labore
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque consequatur, quam quis quae
+              labore
               quibusdam qui deserunt sint, doloribus, illo sit repellendus aspernatur cum dolore iste asperiores
               obcaecati aliquid.</p>
             <p><a href="#">More Info</a></p>
           </div>
         </div>
       </div>
-
-      <!-- MAIN WINE CHOICE -->
-      <div class="col s12 m6 l6 grey">
+      <!--- WINE CARD SECTION / WINE CHOICE  -->
+      <div class="col s12 m6 l6">
         <div class="card">
           <div class="card-image waves-effect waves-block waves-light">
-            <!-- WineCard Image -->
+            <!-- Wine Card Image -->
             <img class="activator wine-image"
               src="https://www.thespruceeats.com/thmb/Fv9_8yovhCtj_HYhZXIL6jba43E=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/red-wine-is-poured-into-a-glass-from-a-bottle--light-background--1153158143-98320451802c485cb6d7b5437c7fd60a.jpg"
               alt="placeholder">
           </div>
-          <!-- WineCard Name-->
+          <!-- Wine Card Name-->
           <div class="card-content">
-            <span class="card-title wine-name activator grey-text text-darken-4">Wine Name<i class="right"><h6>Our Top Choice</h6></i></span>
+            <span class="card-title wine-name activator grey-text text-darken-4">Wine Name<i class="right">
+                <h6>Our Top Choice</h6>
+              </i></span>
             <!-- <span class="grey-text text-darken-4">Our Top Choice</i> -->
           </div>
-          <!-- Reveal WineCard Section -->
+          <!-- Reveal Wine Card Section -->
           <div class="card-reveal wine-reveal">
             <span class="card-title grey-text text-darken-4">Wine Name<i class="material-icons right">close</i></span>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque consequatur, quam quis quae labore
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque consequatur, quam quis quae
+              labore
               quibusdam qui deserunt sint, doloribus, illo sit repellendus aspernatur cum dolore iste asperiores
               obcaecati aliquid.</p>
             <p><a href="#">More Info</a></p>
@@ -136,7 +168,8 @@
           <div class="card-reveal wine-reveal">
             <span class="card-title wine-name grey-text text-darken-4">Wine Name<i
                 class="material-icons right">close</i></span>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque consequatur, quam quis quae labore
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque consequatur, quam quis quae
+              labore
               quibusdam qui deserunt sint, doloribus, illo sit repellendus aspernatur cum dolore iste asperiores
               obcaecati aliquid.</p>
             <p><a href="#">More Info</a></p>
@@ -159,7 +192,8 @@
           <!-- Reveal WineCard Section -->
           <div class="card-reveal wine-reveal">
             <span class="card-title grey-text text-darken-4">Wine Name<i class="material-icons right">close</i></span>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque consequatur, quam quis quae labore
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque consequatur, quam quis quae
+              labore
               quibusdam qui deserunt sint, doloribus, illo sit repellendus aspernatur cum dolore iste asperiores
               obcaecati aliquid.</p>
           </div>
@@ -181,7 +215,8 @@
           <!-- Reveal WineCard Section -->
           <div class="card-reveal wine-reveal">
             <span class="card-title grey-text text-darken-4">Wine Name<i class="material-icons right">close</i></span>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque consequatur, quam quis quae labore
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque consequatur, quam quis quae
+              labore
               quibusdam qui deserunt sint, doloribus, illo sit repellendus aspernatur cum dolore iste asperiores
               obcaecati aliquid.</p>
             <p><a href="#">More Info</a></p>
@@ -190,6 +225,7 @@
       </div>
     </div>
   </div>
+
 
   <!-- RECOMMENDATION SECTION 1 -->
   <div class="content-wrapper">
@@ -240,10 +276,10 @@
   </div>
 
   <!-- FOOTER SECTION -->
-  <footer class="page-footer teal">
+  <footer class="page-footer center white">
     <div class="footer-copyright">
-      <div class="container">
-        @2020 Made By<a class="brown-text text-lighten-3" href="http://materializecss.com"> Team 5</a>
+      <div class="container black-text">
+        @2020 Made By<a class="black-text text-lighten-3" href="http://materializecss.com"> Team 5</a>
       </div>
     </div>
   </footer>
