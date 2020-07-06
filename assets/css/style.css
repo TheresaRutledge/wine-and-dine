@@ -116,4 +116,9 @@ margin: 0;
 }
 }
 
+/* optional to make the website a light grey. Brings out the white sections more */
+body {
+    background-color: #ddd;
+}
+
 

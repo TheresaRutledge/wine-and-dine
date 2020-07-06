@@ -72,3 +72,8 @@ function getWinePhotos () {
 
 //submit button listener
 submitBtn.addEventListener('click',buttonHandler);
+
+//Jquery to make wine cards responsive and enlarge when clicked on
+$(document).ready(function(){
+  $('.materialbox').materialbox();
+});
