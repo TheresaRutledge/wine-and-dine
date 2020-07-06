@@ -32,9 +32,7 @@ $(document).ready(function () {
  const buttonHandler = (event) => {
     event.preventDefault();
     foodInput = document.querySelector('#dinner-input').value;
-    getWinePhotos();
     getWinePairing();
-    getWineCards();//Can't do this until getWinePairing and getWinePhotos have resolved
 }
 
 
@@ -45,13 +43,14 @@ const getWinePairing = () => {
             response.json()
             .then(function (data) {
               if(data.status==='failure'){
-                  //error message modal
+                  //error message modal and stop program
                   console.log('Not a valid food entry');
               } else {
                 //wine varietals that pair with input
                 pairedWines=data.pairedWines;
                 //text supplied for pairing
                 pairedText = data.pairedText;
+                getWinePhotos();
               }
             })
         })
@@ -71,9 +70,15 @@ function getWinePhotos () {
       winePhotos.forEach(photo => 
         photoUrls.push(photo.urls.regular)
       )
+      getWineCards();
     })
   // console.log(photoUrls) //For test only
   
+}
+
+const getRandom = () => {
+  let num = Math.floor(Math.random()*10);
+  return num;
 }
 
 //based on paired wines returned this function will create a card for each wine with a picture and the wine varietal
