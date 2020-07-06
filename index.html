@@ -14,141 +14,57 @@
 </head>
 
 <body>
-  <!-- NAV BAR SECTION -->
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-      <!-- Logo -->
       <a id="logo-container" href="#" class="brand-logo">Wine & Dine</a>
-      <!-- NavBar Main on Right-->
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Navbar Link</a></li>
+        <li>
+          <a href="#recommendations">Recommendations</a>
+        </li>
       </ul>
-      <!-- NavBar for Mobile on Left-->
+
       <ul id="nav-mobile" class="sidenav">
-        <li><a href="#">Navbar Link</a></li>
+        <li>
+          <a href="#recommendations">Recommendations</a>
+        </li>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
   </nav>
 
-  <!-- MAIN SECTION -->
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <!-- Main Tagline -->
-        <h1 class="header center light">Whats for Dinner?</h1>
+        <h1 class="header center light black-text text-darken-2"><strong>What's for Dinner?</strong></h1>
         <div class="row center">
-          <!-- Main Description Text-->
-          <h5 class="header col s12">Our website pairs different types of wine depending on your dinner selection</h5>
-          <!-- Search Bar -->
-          <form class="col s12">
-            <div class="row">
-              <div class="input-field col s6">
-                <input placeholder="Placeholder" id="first_name" type="text" class="validate">
-                <label for="first_name">First Name</label>
-              </div>
+          <h5 class="header col s12 black-text text-darken-2"><strong>Our website pairs different types of wine
+              depending on your dinner selection</strong></h5>
+          <div class="row">
+            <!-- Empty Column -->
+            <div class="col s3">
             </div>
-            <!-- Submit Button-->
-            <button class='btn btn-primary orange lighten-2' type='submit'>Submit</button>
-          </form>
-        </div>
-        <br><br>
 
+            <div class="input-field col s6">
+              <input placeholder="Enter Dinner Selection" type="text" class="validate">
+            </div>
+
+            <!-- Empty Column -->
+            <div class="col s3">
+            </div>
+
+            <div class="row center"></div>
+            <div class="col s12"></div>
+            <button class='btn btn-primary indigo lighten-1' type='submit'>Submit</button>
+          </div>
+        </div>
       </div>
     </div>
-    <!-- Vineyard Image Background -->
     <div class="parallax"><img src="./assets/images/homepage-background.jpg" alt="Unsplashed background img 1"></div>
   </div>
 
-  <!-- FOOD / WINE INPUT SECTION -->
-  <br>
-  <div class="container">
-    <div class="row item-selector">
-      <!-- Food Selector -->
-      <div class="col s12 m6 white">
-        <select class="icons">
-          <option value="" disabled selected>Choose your dish</option>
-          <option value="" data-icon="images/sample-1.jpg">Beef</option>
-          <option value="" data-icon="images/sample-2.jpg">Chicken</option>
-          <option value="" data-icon="images/sample-3.jpg">Pork</option>
-          <option value="" data-icon="images/sample-4.jpg">Fish</option>
-          <option value="" data-icon="images/sample-5.jpg">Cheese</option>
-        </select>
-        <!-- <label>Images in select</label> -->
-      </div>
-      <!-- Wine Selector -->
-      <div class="col s12 m6 white">
-        <select class="icons">
-          <option value="" disabled selected>Choose your wine</option>
-          <option value="" data-icon="images/sample-6.jpg" class="left">White Wine</option>
-          <option value="" data-icon="images/sample-7.jpg" class="left">Red Wine</option>
-          <option value="" data-icon="images/sample-8.jpg" class="left">Rose Wine</option>
-          <option value="" data-icon="images/sample-9.jpg" class="left">Dessert Wine</option>
-          <option value="" data-icon="images/sample-10.jpg" class="left">Sparkling Wine</option>
-        </select>
-        <!-- <label>Images in select</label> -->
-      </div>
-    </div>
-  </div>
-
-  <!--- WINE CARD SECTION / FOOD CHOICE  -->
-  <div class="container grey">
-    <div class="row">
-      <div class="col s12 m6 l6">
-        <div class="card">
-          <div class="card-image waves-effect waves-block waves-light">
-            <!-- Food Image -->
-            <img class="activator food-image"
-              src="https://assets.reluctantgourmet.com/wp-content/uploads/2006/10/02163335/84bd8bd55711fc1be7650ea3945868c3.jpg"
-              alt="placeholder">
-          </div>
-          <!-- Food Name -->
-          <div class="card-content">
-            <span class="card-title wine-name activator grey-text text-darken-4">Food Name</span>
-          </div>
-          <!-- Reveal Food Card Section -->
-          <div class="card-reveal food-reveal">
-            <span class="card-title grey-text text-darken-4">Food Name<i class="material-icons right">close</i></span>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque consequatur, quam quis quae
-              labore
-              quibusdam qui deserunt sint, doloribus, illo sit repellendus aspernatur cum dolore iste asperiores
-              obcaecati aliquid.</p>
-            <p><a href="#">More Info</a></p>
-          </div>
-        </div>
-      </div>
-      <!--- WINE CARD SECTION / WINE CHOICE  -->
-      <div class="col s12 m6 l6">
-        <div class="card">
-          <div class="card-image waves-effect waves-block waves-light">
-            <!-- Wine Card Image -->
-            <img class="activator wine-image"
-              src="https://www.thespruceeats.com/thmb/Fv9_8yovhCtj_HYhZXIL6jba43E=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/red-wine-is-poured-into-a-glass-from-a-bottle--light-background--1153158143-98320451802c485cb6d7b5437c7fd60a.jpg"
-              alt="placeholder">
-          </div>
-          <!-- Wine Card Name-->
-          <div class="card-content">
-            <span class="card-title wine-name activator grey-text text-darken-4">Wine Name<i class="right">
-                <h6>Our Top Choice</h6>
-              </i></span>
-            <!-- <span class="grey-text text-darken-4">Our Top Choice</i> -->
-          </div>
-          <!-- Reveal Wine Card Section -->
-          <div class="card-reveal wine-reveal">
-            <span class="card-title grey-text text-darken-4">Wine Name<i class="material-icons right">close</i></span>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque consequatur, quam quis quae
-              labore
-              quibusdam qui deserunt sint, doloribus, illo sit repellendus aspernatur cum dolore iste asperiores
-              obcaecati aliquid.</p>
-            <p><a href="#">More Info</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- ALTERNATE WINE RECOMMENDATION SECTION -->
+  <br>
   <div class="container grey">
     <div class="row">
       <!-- Recommendation ALT 1 -->
@@ -170,7 +86,8 @@
                 class="material-icons right">close</i></span>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque consequatur, quam quis quae
               labore
-              quibusdam qui deserunt sint, doloribus, illo sit repellendus aspernatur cum dolore iste asperiores
+              quibusdam qui deserunt sint, doloribus, illo sit repellendus aspernatur cum dolore iste
+              asperiores
               obcaecati aliquid.</p>
             <p><a href="#">More Info</a></p>
           </div>
@@ -194,7 +111,8 @@
             <span class="card-title grey-text text-darken-4">Wine Name<i class="material-icons right">close</i></span>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque consequatur, quam quis quae
               labore
-              quibusdam qui deserunt sint, doloribus, illo sit repellendus aspernatur cum dolore iste asperiores
+              quibusdam qui deserunt sint, doloribus, illo sit repellendus aspernatur cum dolore iste
+              asperiores
               obcaecati aliquid.</p>
           </div>
         </div>
@@ -217,7 +135,8 @@
             <span class="card-title grey-text text-darken-4">Wine Name<i class="material-icons right">close</i></span>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque consequatur, quam quis quae
               labore
-              quibusdam qui deserunt sint, doloribus, illo sit repellendus aspernatur cum dolore iste asperiores
+              quibusdam qui deserunt sint, doloribus, illo sit repellendus aspernatur cum dolore iste
+              asperiores
               obcaecati aliquid.</p>
             <p><a href="#">More Info</a></p>
           </div>
@@ -226,9 +145,9 @@
     </div>
   </div>
 
-
-  <!-- RECOMMENDATION SECTION 1 -->
-  <div class="content-wrapper">
+  <!-- Recommendations Start -->
+  <section id="recommendations"></section>
+  <div class="content-wrapper" style="">
     <div class="content">
       <div class="sqs-layout sqs-grid-12 columns-12" data-type="page-section"
         id="page-section-5d9b8e32ee4c1a6a6957e7b0">
@@ -236,11 +155,9 @@
           <div class="col sqs-col-12 span-12">
             <div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-ece90328df048d3dec51">
               <div class="sqs-block-content">
-                <!-- Recommendation Text -->
                 <h2>Some of Our Favorites</h2>
               </div>
             </div>
-            <!-- Food Description Container -->
             <div class="sqs-block menu-block sqs-block-menu" data-block-type="18" id="block-76bdf4a873f7f0c42d62">
               <div class="sqs-block-content">
                 <div class="menu-wrapper menu-style-classic">
@@ -253,7 +170,6 @@
                       <div class="menu-section">
                         <div class="menu-items">
                           <div class="menu-item">
-                            <!-- Food Description -->
                             <div class="menu-item-title">Steak & Cabernet Sauvignon</div>
                           </div>
                           <div class="menu-item">
@@ -267,27 +183,20 @@
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- FOOTER SECTION -->
-  <footer class="page-footer center white">
-    <div class="footer-copyright">
-      <div class="container black-text">
-        @2020 Made By<a class="black-text text-lighten-3" href="http://materializecss.com"> Team 5</a>
-      </div>
-    </div>
-  </footer>
+                <div>
+                  <footer class="page-footer indigo lighten-1">
+                    <div class="footer-container">
+                      © 2014 Copyright Text
+                    </div>
+                  </footer>
+                </div>
 
-  <!-- JavaScript -->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="./assets/js/script.js"></script>
+
+                <!-- JavaScript -->
+                <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+                <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
