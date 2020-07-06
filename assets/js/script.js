@@ -1,4 +1,3 @@
-
 const spoonApiKey = '5bb17ff8de4a4ac48777208734e43797';
 const submitBtn = document.querySelector('.btn');
 let pairedWines=[];
@@ -14,10 +13,14 @@ let winePhotos;
   }); // end of document ready
 })(jQuery); // end of jQuery name space
 
+
+
+
 //SEARCH BAR
 $(document).ready(function () {
   $('.sidenav').sidenav();
 });
+
 
 //SELECT BAR
 $(document).ready(function () {
@@ -32,6 +35,7 @@ const buttonHandler = (event) =>{
     getWinePhotos();
     //add other function calls here
 }
+
 
 //fetches wine pairing and text
 const getWinePairing = () => {
