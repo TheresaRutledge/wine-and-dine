@@ -29,12 +29,12 @@ $(document).ready(function () {
 });
 
 //functions to call when submit clicked
-const buttonHandler = (event) =>{
+ const buttonHandler = (event) => {
     event.preventDefault();
     foodInput = document.querySelector('#dinner-input').value;
-    getWinePairing();
     getWinePhotos();
-    //add other function calls here
+    getWinePairing();
+    getWineCards();//Can't do this until getWinePairing and getWinePhotos have resolved
 }
 
 
@@ -55,6 +55,7 @@ const getWinePairing = () => {
               }
             })
         })
+        
 }
 //fetches 10 wine images and stores to photoUrls
 function getWinePhotos () {
@@ -66,14 +67,53 @@ function getWinePhotos () {
       return response.json()
     })
     .then(function (response) {
-      console.log(response)
-      winePhotos = response.results
-      winePhotos.forEach(photo => {
+      winePhotos = response.results;
+      winePhotos.forEach(photo => 
         photoUrls.push(photo.urls.regular)
-      })
+      )
     })
-  console.log(photoUrls) //For test only
+  // console.log(photoUrls) //For test only
+  
 }
 
+//based on paired wines returned this function will create a card for each wine with a picture and the wine varietal
+const getWineCards = () =>{
+  let wineCardsContainerEl = document.querySelector('#wine-card-container');
+  wineCardsContainerEl.innerHTML='';
+  for (i=0;i<pairedWines.length;i++){
+
+  let columnContainerEl = document.createElement('div');
+  columnContainerEl.classList = 'col s12 m4 grey';
+
+  let cardContainerEl =  document.createElement('div');
+  cardContainerEl.classList ='card';
+
+  let imageContainerEl = document.createElement('div');
+  imageContainerEl.classList = 'card-image waves-effect waves-block waves-light';
+
+  let imageEl =document.createElement('img');
+  imageEl.classList='activator wine-image';
+  imageEl.setAttribute('alt','wine picture');
+  imageEl.setAttribute('src',photoUrls[getRandom()]);
+  imageContainerEl.appendChild(imageEl);
+
+  let titleContainerEl = document.createElement('div');
+  titleContainerEl.classList = 'card-content';
+
+  let titleEl = document.createElement('span');
+  titleEl.classList='card-title wine-name activator grey-text text-darken-4';
+  titleEl.textContent = pairedWines[i];
+  titleContainerEl.appendChild(titleEl);
+
+  cardContainerEl.appendChild(imageContainerEl);
+  cardContainerEl.appendChild(titleContainerEl);
+
+  columnContainerEl.appendChild(cardContainerEl);
+
+  wineCardsContainerEl.appendChild(columnContainerEl);
+
+  }
+
+}
 //submit button listener
 submitBtn.addEventListener('click',buttonHandler);
