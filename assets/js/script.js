@@ -31,7 +31,7 @@ $(document).ready(function () {
 //functions to call when submit clicked
 const buttonHandler = (event) =>{
     event.preventDefault();
-    foodInput = 'burger'//Need selector here when html is done
+    foodInput = document.querySelector('#dinner-input').value;
     getWinePairing();
     getWinePhotos();
     //add other function calls here
@@ -44,11 +44,15 @@ const getWinePairing = () => {
         .then(function (response) {
             response.json()
             .then(function (data) {
-                console.log(data);
+              if(data.status==='failure'){
+                  //error message modal
+                  console.log('Not a valid food entry');
+              } else {
                 //wine varietals that pair with input
                 pairedWines=data.pairedWines;
                 //text supplied for pairing
                 pairedText = data.pairedText;
+              }
             })
         })
 }
