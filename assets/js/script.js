@@ -6,6 +6,7 @@ let pairedText;
 let photoUrls = [];
 let winePhotos;
 
+
 (function($){
   $(function(){
     $('.sidenav').sidenav();
@@ -31,6 +32,11 @@ $(document).ready(function () {
     getWinePairing();
 }
 
+const openModal = () => {
+ $('.modal').modal();
+ $('#modalError').modal('open');
+}
+
 //fetches wine pairing and text
 const getWinePairing = () => {
     fetch(`https://api.spoonacular.com/food/wine/pairing?food=${foodInput}&apiKey=${spoonApiKey}`)
@@ -39,7 +45,7 @@ const getWinePairing = () => {
             .then(function (data) {
               if(data.status==='failure'){
                   //error message modal and stop program
-                  console.log('Not a valid food entry');
+                 openModal();     
               } else {
                 //wine varietals that pair with input
                 pairedWines=data.pairedWines;
@@ -135,7 +141,8 @@ $(document).ready(function(){
 });
 
 //JQUERY MODAL ERROR BUTTON FUNCTION calls all buttons with '.modal' to run Modal()
-$(document).ready(function(){
-  $('.modal').modal()
-;})
+
+// $(document).ready(function(){
+//   $('.modal').modal()
+// ;})
 
