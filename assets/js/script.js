@@ -1,15 +1,18 @@
-const spoonApiKey = '5bb17ff8de4a4ac48777208734e43797'
-const submitBtn = document.querySelector('.btn')
-let pairedWines = []
-let pairedText
-let photoUrls = []
-let winePhotos
-;(function ($) {
-  $(function () {
-    $('.sidenav').sidenav()
-    $('.parallax').parallax()
-  }) // end of document ready
-})(jQuery) // end of jQuery name space
+
+const spoonApiKey = '5bb17ff8de4a4ac48777208734e43797';
+const submitBtn = document.querySelector('.btn');
+let pairedWines=[];
+let pairedText;
+let photoUrls = [];
+let winePhotos;
+
+(function($){
+  $(function(){
+    $('.sidenav').sidenav();
+    $('.parallax').parallax();
+
+  }); // end of document ready
+})(jQuery); // end of jQuery name space
 
 //SEARCH BAR
 $(document).ready(function () {
@@ -67,4 +70,10 @@ function getWinePhotos (food) {
 }
 
 //submit button listener
-submitBtn.addEventListener('click', buttonHandler)
+submitBtn.addEventListener('click',buttonHandler);
+
+//Jquery to make wine cards responsive and enlarge when clicked on
+$(document).ready(function(){
+  $('.materialbox').materialbox();
+});
+
