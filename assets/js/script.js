@@ -134,3 +134,8 @@ $(document).ready(function(){
   $('.materialbox').materialbox();
 });
 
+//JQUERY MODAL ERROR BUTTON FUNCTION calls all buttons with '.modal' to run Modal()
+$(document).ready(function(){
+  $('.modal').modal()
+;})
+
