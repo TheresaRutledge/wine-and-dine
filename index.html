@@ -14,98 +14,142 @@
 </head>
 
 <body>
-    <nav class="white" role="navigation">
-        <div class="nav-wrapper container">
-        <a id="logo-container" href="#" class="brand-logo">Wine & Dine</a>
-        <ul class="right hide-on-med-and-down">
-            <li>
-                <a href="#recommendations">Recommendations</a>
-            </li>
-        </ul>
 
-        <ul id="nav-mobile" class="sidenav">
-            <li>
-                <a href="#recommendations">Recommendations</a>
-            </li>
-        </ul>
-        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        </div>
-    </nav>
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo">Wine & Dine</a>
+      <ul class="right hide-on-med-and-down">
+        <li>
+          <a href="#recommendations">Recommendations</a>
+        </li>
+      </ul>
 
-    <div id="index-banner" class="parallax-container">
-        <div class="section no-pad-bot">
-        <div class="container">
-            <br><br>
-            <h1 class="header center light black-text text-darken-2"><strong>What's for Dinner?</strong></h1>
-            <div class="row center">
-            <h5 class="header col s12 black-text text-darken-2"><strong>Our website pairs different types of wine depending on your dinner selection</strong></h5>
-                <div class="row">
-                    <!-- Empty Column -->
-                    <div class="col s3">
-                    </div>
+      <ul id="nav-mobile" class="sidenav">
+        <li>
+          <a href="#recommendations">Recommendations</a>
+        </li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
 
-                    <div class="input-field col s6">
-                        <input placeholder="Enter Dinner Selection" type="text" class="validate" id='dinner-input'>
-                    </div>
-
-                    <!-- Empty Column -->
-                    <div class="col s3">
-                    </div>
-
-                    <div class="row center"></div>
-                    <div class="col s12"></div>
-                    <button class='btn btn-primary indigo lighten-1' type='submit'>Submit</button>
-                </div>
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center light black-text text-darken-2"><strong>What's for Dinner?</strong></h1>
+        <div class="row center">
+          <h5 class="header col s12 black-text text-darken-2"><strong>Our website pairs different types of wine
+              depending on your dinner selection</strong></h5>
+          <div class="row">
+            <!-- Empty Column -->
+            <div class="col s3">
             </div>
+
+            <div class="input-field col s6">
+              <input placeholder="Enter Dinner Selection" type="text" class="validate" id='dinner-input'>
+            </div>
+
+            <!-- Empty Column -->
+            <div class="col s3">
+            </div>
+
+            <div class="row center"></div>
+            <div class="col s12"></div>
+            <button class='btn btn-primary indigo lighten-1' type='submit'>Submit</button>
+          </div>
         </div>
+      </div>
     </div>
     <div class="parallax"><img src="./assets/images/homepage-background.jpg" alt="Unsplashed background img 1"></div>
-    </div>
-<!-- Added by Theresa for wine cards container -->
-<div class='container grey'>
-  <div class='row'id='wine-card-container'>
-  
   </div>
-</div>
-    <!-- Recommendations Start -->
-    <section id="recommendations"></section>
-    <div class="content-wrapper" style="">
-        <div class="content">
-            <div class="sqs-layout sqs-grid-12 columns-12" data-type="page-section" id="page-section-5d9b8e32ee4c1a6a6957e7b0"><div class="row sqs-row"><div class="col sqs-col-12 span-12"><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-ece90328df048d3dec51"><div class="sqs-block-content"><h2>Some of Our Favorites</h2></div></div><div class="sqs-block menu-block sqs-block-menu" data-block-type="18" id="block-76bdf4a873f7f0c42d62"><div class="sqs-block-content">
-            <div class="menu-wrapper menu-style-classic">
-                <div class="menus ">
-                <input checked="checked" class="menu-select-button" id="menu-select-1-a09d3934-f989-4e27-a7ea-d7b6d503d42f" type="radio" name="menu-selector-a09d3934-f989-4e27-a7ea-d7b6d503d42f" onchange="applyActiveStyle('1-a09d3934-f989-4e27-a7ea-d7b6d503d42f')">
-                    <div class="menu menu-1-a09d3934-f989-4e27-a7ea-d7b6d503d42f ">
-                    <div class="menu-section">
-                    <div class="menu-items">
-                        <div class="menu-item">
-                            <div class="menu-item-title">Steak & Cabernet Sauvignon</div>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-item-title">Hamburger & Syrah Shiraz</div>
-                        </div>
-                        <div class="menu-item">
-                        <div class="menu-item-title">Pasta & Primitivo</div>
-                        </div>
-                    </div>
-                </div>
+
+<!-- Food picture section -->
+
+  <!-- ALTERNATE WINE RECOMMENDATION SECTION Version 2 -->
+  <div class="container white">
+    <h1 class="center">Wine Gallery</h1>
+    <!-- do we want a "header" or "p" below? -->
+    <p class="center">Wine Gallery</p>
+    <div class="row card" id='wine-card-container'>
+      <!-- default test image 1 remove after JS updated -->
+      <!-- <div class="col s12 m6 l4">
+        <img class="responsive-img card materialbox"
+          src="https://www.thespruceeats.com/thmb/Fv9_8yovhCtj_HYhZXIL6jba43E=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/red-wine-is-poured-into-a-glass-from-a-bottle--light-background--1153158143-98320451802c485cb6d7b5437c7fd60a.jpg"
+          alt="placeholder">
+      </div> -->
+      <!-- Simple responsive text section. "flow-text" allows the text to auto adjust to screen size -->
+      <div class="container">
+        <div class="row" id='wine-card-text-container'>
+          <div class="col s12">
+            <div class="card-panel responsive materialbox">
+              <p class="flow-text">Food Description:</p>
+              <span class=" flow-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque iste earum commodi
+                aliquid maiores voluptatum sit quis voluptas, corrupti veritatis ducimus mollitia. Aperiam illum, animi
+                reiciendis repellendus nobis molestias vel?</span>
+
             </div>
+          </div>
         </div>
+      </div>
     </div>
 
-    <div>
-        <footer class="page-footer indigo lighten-1">
-            <div class="footer-container">
-                © 2014 Copyright Text
-            </div>
-        </footer>
-    </div>
-    
+    <!-- Recommendations Start -->
+    <section id="recommendations">
+      <div class="content-wrapper" style="">
+        <div class="content">
+          <div class="sqs-layout sqs-grid-12 columns-12" data-type="page-section"
+            id="page-section-5d9b8e32ee4c1a6a6957e7b0">
+            <div class="row sqs-row">
+              <div class="col sqs-col-12 span-12">
+                <div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-ece90328df048d3dec51">
+                  <div class="sqs-block-content">
+                    <h2>Some of Our Favorites</h2>
+                  </div>
+                </div>
+                <div class="sqs-block menu-block sqs-block-menu" data-block-type="18" id="block-76bdf4a873f7f0c42d62">
+                  <div class="sqs-block-content">
+                    <div class="menu-wrapper menu-style-classic">
+                      <div class="menus ">
+                        <input checked="checked" class="menu-select-button"
+                          id="menu-select-1-a09d3934-f989-4e27-a7ea-d7b6d503d42f" type="radio"
+                          name="menu-selector-a09d3934-f989-4e27-a7ea-d7b6d503d42f"
+                          onchange="applyActiveStyle('1-a09d3934-f989-4e27-a7ea-d7b6d503d42f')">
+                        <div class="menu menu-1-a09d3934-f989-4e27-a7ea-d7b6d503d42f ">
+                          <div class="menu-section">
+                            <div class="menu-items">
+                              <div class="menu-item">
 
-  <!-- JavaScript -->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="./assets/js/script.js"></script>
+                                <div class="menu-item-title">Steak & Cabernet Sauvignon</div>
+                              </div>
+                              <div class="menu-item">
+                                <div class="menu-item-title">Hamburger & Syrah Shiraz</div>
+                              </div>
+                              <div class="menu-item">
+                                <div class="menu-item-title">Pasta & Primitivo</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    </section>
+    <footer class="page-footer indigo lighten-1">
+      <div class="footer-container">
+        © 2014 Copyright Text
+      </div>
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>

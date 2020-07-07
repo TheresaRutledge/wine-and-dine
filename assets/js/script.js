@@ -14,19 +14,15 @@ let winePhotos;
   }); // end of document ready
 })(jQuery); // end of jQuery name space
 
-
-
-
 //SEARCH BAR
 $(document).ready(function () {
-  $('.sidenav').sidenav();
-});
-
+  $('.sidenav').sidenav()
+})
 
 //SELECT BAR
 $(document).ready(function () {
-  $('select').formSelect();
-});
+  $('select').formSelect()
+})
 
 //functions to call when submit clicked
  const buttonHandler = (event) => {
@@ -34,7 +30,6 @@ $(document).ready(function () {
     foodInput = document.querySelector('#dinner-input').value;
     getWinePairing();
 }
-
 
 //fetches wine pairing and text
 const getWinePairing = () => {
@@ -50,18 +45,22 @@ const getWinePairing = () => {
                 pairedWines=data.pairedWines;
                 //text supplied for pairing
                 pairedText = data.pairedText;
-                getWinePhotos();
+                getWinePhotos('wine');
               }
             })
         })
         
 }
-//fetches 10 wine images and stores to photoUrls
-function getWinePhotos () {
-  fetch(
-    'https://api.unsplash.com/search/photos?query=wine&' +
-      'client_id=BSXJED6UhyH4DSPVkqo8B2ThVz-Hyq083g1E7AhrR1k'
-  )
+
+//fetches 10 "wine" or "steak" or "pasta" images as specified in the input parameter,
+// and stores to photoUrls
+function getWinePhotos (food) {
+  let url = 'https://api.unsplash.com/search/photos?query='
+  let client_id = '&client_id=BSXJED6UhyH4DSPVkqo8B2ThVz-Hyq083g1E7AhrR1k'
+  let fetchUrl = `${url}${food}${client_id}`
+  console.log(fetchUrl)
+
+  fetch(fetchUrl)
     .then(function (response) {
       return response.json()
     })
@@ -120,5 +119,18 @@ const getWineCards = () =>{
   }
 
 }
+
+//food picture function goes here
+
+//localstorage save
+
+//load from local storage
+
 //submit button listener
 submitBtn.addEventListener('click',buttonHandler);
+
+//Jquery to make wine cards responsive and enlarge when clicked on
+$(document).ready(function(){
+  $('.materialbox').materialbox();
+});
+
