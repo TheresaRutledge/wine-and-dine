@@ -6,6 +6,7 @@ let pairedText;
 let photoUrls = [];
 let winePhotos;
 
+
 (function($){
   $(function(){
     $('.sidenav').sidenav();
@@ -31,6 +32,11 @@ $(document).ready(function () {
     getWinePairing();
 }
 
+const openModal = () => {
+ $('.modal').modal();
+ $('#modalError').modal('open');
+}
+
 //fetches wine pairing and text
 const getWinePairing = () => {
     fetch(`https://api.spoonacular.com/food/wine/pairing?food=${foodInput}&apiKey=${spoonApiKey}`)
@@ -39,12 +45,12 @@ const getWinePairing = () => {
             .then(function (data) {
               if(data.status==='failure'){
                   //error message modal and stop program
-                  console.log('Not a valid food entry');
+                 openModal();     
               } else {
                 //wine varietals that pair with input
                 pairedWines=data.pairedWines;
                 //text supplied for pairing
-                pairedText = data.pairedText;
+                pairedText = data.pairingText;
                 getWinePhotos('wine');
               }
             })
@@ -82,42 +88,53 @@ const getRandom = () => {
 
 //based on paired wines returned this function will create a card for each wine with a picture and the wine varietal
 const getWineCards = () =>{
+ 
+  if(pairedText === ''){
+    pairedText = `Oops, looks like we don't have wine pairings for that food yet.`
+  }
   let wineCardsContainerEl = document.querySelector('#wine-card-container');
   wineCardsContainerEl.innerHTML='';
   for (i=0;i<pairedWines.length;i++){
 
   let columnContainerEl = document.createElement('div');
-  columnContainerEl.classList = 'col s12 m4 grey';
+  columnContainerEl.classList = 'col s12 m6 l4 card';
 
-  let cardContainerEl =  document.createElement('div');
-  cardContainerEl.classList ='card';
-
-  let imageContainerEl = document.createElement('div');
-  imageContainerEl.classList = 'card-image waves-effect waves-block waves-light';
 
   let imageEl =document.createElement('img');
-  imageEl.classList='activator wine-image';
+  imageEl.classList='responsive-img card materialbox';
   imageEl.setAttribute('alt','wine picture');
   imageEl.setAttribute('src',photoUrls[getRandom()]);
-  imageContainerEl.appendChild(imageEl);
-
-  let titleContainerEl = document.createElement('div');
-  titleContainerEl.classList = 'card-content';
+  columnContainerEl.appendChild(imageEl);
 
   let titleEl = document.createElement('span');
-  titleEl.classList='card-title wine-name activator grey-text text-darken-4';
+  titleEl.classList='card-title activator grey-text text-darken-4';
   titleEl.textContent = pairedWines[i];
-  titleContainerEl.appendChild(titleEl);
-
-  cardContainerEl.appendChild(imageContainerEl);
-  cardContainerEl.appendChild(titleContainerEl);
-
-  columnContainerEl.appendChild(cardContainerEl);
+  columnContainerEl.appendChild(titleEl);
 
   wineCardsContainerEl.appendChild(columnContainerEl);
-
   }
+  let textContainerEl = document.createElement('div');
+  textContainerEl.classList ='container';
 
+  let textRowEl = document.createElement('div');
+  textRowEl.classList='row';
+
+  let wineTextColumnEl = document.createElement('div');
+  wineTextColumnEl.classList = 'col s12';
+
+  let wineTextCardEl = document.createElement('div');
+  wineTextCardEl.classList = 'card-panel responsive materialbox';
+
+  let wineTextEl = document.createElement('span');
+  wineTextEl.classList ='flow-text';
+  wineTextEl.textContent = pairedText;
+
+  wineTextCardEl.appendChild(wineTextEl);
+  wineTextColumnEl.appendChild(wineTextCardEl);
+  textRowEl.appendChild(wineTextColumnEl);
+  textContainerEl.appendChild(textRowEl);
+
+  wineCardsContainerEl.appendChild(textContainerEl);
 }
 
 //food picture function goes here
@@ -134,8 +151,5 @@ $(document).ready(function(){
   $('.materialbox').materialbox();
 });
 
-//JQUERY MODAL ERROR BUTTON FUNCTION calls all buttons with '.modal' to run Modal()
-$(document).ready(function(){
-  $('.modal').modal()
-;})
+
 
