@@ -5,6 +5,8 @@ let pairedWines=[];
 let pairedText;
 let photoUrls = [];
 let winePhotos;
+let foodInput;
+let previousSearchArr = [];
 
 
 (function($){
@@ -125,6 +127,7 @@ const getWineCards = () =>{
   let wineTextCardEl = document.createElement('div');
   wineTextCardEl.classList = 'card-panel responsive materialbox';
 
+
   let wineTextEl = document.createElement('span');
   wineTextEl.classList ='flow-text';
   wineTextEl.textContent = pairedText;
@@ -139,9 +142,35 @@ const getWineCards = () =>{
 
 //food picture function goes here
 
-//localstorage save
+//saves last three searches and thier pairings to local storage
+const saveToStorage = () =>{
+previousSearchArr.unshift(
+  {
+    food:foodInput,
+    pairings: pairedWines
+  }
+);
+if(previousSearchArr.length>3){
+  previousSearchArr.pop();
+}
+  localStorage.setItem('previousSearch',JSON.stringify(previousSearchArr));
+
+}
 
 //load from local storage
+const loadFromStorage = () => {
+  let newArr = JSON.parse(localStorage.getItem('previousSearch'));
+  if (newArr){
+    previousSearchArr = newArr;
+    // displayPrevious();  //needs to be written
+  }
+}
+
+//display previous searches
+const displayPrevious = () => {
+  //previousSearchArr has info stored in object as food and pairings(array)
+}
+
 
 //submit button listener
 submitBtn.addEventListener('click',buttonHandler);
