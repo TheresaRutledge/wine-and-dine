@@ -1,119 +1,170 @@
-    nav ul a,
-    nav .brand-logo {
-        text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-        color: black;
-    }
-    
-    p {
-    line-height: 2rem;
-    }
-    
-    .btn-btn-primary-rounded {
-    color:black;
-    }
-    
-    .content-wrapper{
-    background-color: #000;
-    }
+nav ul a,
+nav .brand-logo {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: black;
+}
 
-    ::placeholder {
-        color: #000;
-        opacity: 1;
-        text-align: center;
-    }
+p {
+line-height: 2rem;
+}
 
-    .validate {
-        text-align: center;
-    }
+.btn-btn-primary-rounded {
+color:black;
+}
 
-    input[type=text]:focus{
-        outline: 2px solid rgb(126, 38, 228);     
-    }
-    
-    .menu-item {
-    color: white;
-    }
-    
-    h2 {
-    color: white
-    }
-    
-    .content {
-    justify-content: center;
-    padding-right: 3vw;
-    padding-left: 3vw;
-    display: flex;
-    font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 400;
-    font-family: freight-text-pro;
-    font-weight: 300;
-    font-style: normal;
-    letter-spacing: 0em;
-    text-transform: none;
-    }
-    
-    .menu-item {
-    font-size: 20px;
+.brand-logo{
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.recommendations {
+    float: left;
+}
+
+.nav-bar {     
+    display: ;  
+}
+
+.btn-primary {
+    border-radius: 30px;
+}
+
+.fa {
+    padding-top: 5px;
+    font-size: 30px;
+    width: 45px;
+    height: 45px;
     text-align: center;
-    }
-    
-    .sidenav-trigger {
-    color: #9904fd;
-    }
-    
-    form{
-    background-color: grey;
-    height:75px;
-    width:50%;
-    border-radius: 15px;
-    }
-    
-    h1{
-        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    }
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 40%;
+    float: right;
+}
 
-    h5 {
-        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .fa-facebook {
+    background: rgb(0, 0, 0);
+    color: white;
+  }
 
-    .footer-container {
-        text-align: center;
-    }
-    
-    .parallax-container {
-    min-height: 380px;
-    line-height: 0;
-    height: auto;
-    color: rgba(255,255,255,.9);
-    }
-    .parallax-container .section {
-        width: 100%;
-    }
-    
-    @media only screen and (max-width : 992px) {
-    .parallax-container .section {
-        position: absolute;
-        top: 40%;
-    }
-    #index-banner .section {
-        top: 10%;
-    }
-    }
-    
-    @media only screen and (max-width : 600px) {
-    #index-banner .section {
-        top: 0;
-    }
-    }
-    
-    .icon-block {
-    padding: 0 15px;
-    }
-    .icon-block .material-icons {
-    font-size: inherit;
-    }
-    
-    footer.page-footer {
-    margin: 0;
-    }
-    
+  .fa-twitter {
+    background: #000000;
+    color: white;
+  }
+
+  .fa-instagram {
+    background: #000000;
+    color: white;
+  }
+
+.content-wrapper{
+background-color: #000;
+}
+
+::placeholder {
+    color: #000;
+    opacity: 1;
+    text-align: center;
+}
+
+.validate {
+    text-align: center;
+}
+
+input[type=text]:focus{
+    outline: 2px solid rgb(0, 0, 0);     
+}
+
+.menu-item {
+color: white;
+}
+
+h2 {
+color: white
+}
+
+.content {
+justify-content: center;
+padding-right: 3vw;
+padding-left: 3vw;
+display: flex;
+font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+font-weight: 400;
+font-family: freight-text-pro;
+font-weight: 300;
+font-style: normal;
+letter-spacing: 0em;
+text-transform: none;
+}
+
+.menu-item {
+font-size: 20px;
+text-align: center;
+}
+
+.sidenav-trigger {
+color: #000000;
+}
+
+form{
+background-color: grey;
+height:75px;
+width:50%;
+border-radius: 15px;
+}
+
+h1{
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+h5 {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.footer-container {
+    text-align: center;
+}
+
+.parallax-container {
+min-height: 380px;
+line-height: 0;
+height: auto;
+color: rgba(255,255,255,.9);
+}
+.parallax-container .section {
+    width: 100%;
+}
+
+@media only screen and (max-width : 992px) {
+.parallax-container .section {
+    position: absolute;
+    top: 40%;
+}
+#index-banner .section {
+    top: 10%;
+}
+}
+
+@media only screen and (max-width : 600px) {
+#index-banner .section {
+    top: 0;
+}
+}
+
+.icon-block {
+padding: 0 15px;
+}
+.icon-block .material-icons {
+font-size: inherit;
+}
+
+footer.page-footer {
+margin: 0;
+}

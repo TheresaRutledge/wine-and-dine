@@ -25,6 +25,8 @@ const buttonHandler = (event) =>{
 }
 
 
+
+
 //fetches wine pairing and text
 const getWinePairing = () => {
     fetch(`https://api.spoonacular.com/food/wine/pairing?food=${foodInput}&apiKey=${spoonApiKey}`)
