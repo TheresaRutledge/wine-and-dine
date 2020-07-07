@@ -56,7 +56,8 @@
 
             <div class="row center"></div>
             <div class="col s12"></div>
-            <button class='btn btn-primary indigo lighten-1' type='submit'>Submit</button>
+            <!-- Adapted the modal() into this button feature -->
+            <button data-target="modalError" class="btn btn-primary indigo lighten-1 waves-effect waves-light modal-trigger" type='submit'>Submit</button>
           </div>
         </div>
       </div>
@@ -66,7 +67,22 @@
 
 <!-- Food picture section -->
 
-  <!-- ALTERNATE WINE RECOMMENDATION SECTION Version 2 -->
+<!-- MODAL SECTION -->
+  <!-- Modal Trigger -->
+  <!-- adapted this to the above "submit button" to call the modal
+  <button data-target="modal1" class="btn modal-trigger">Modal</button> -->
+  <!-- Modal Structure -->
+  <div id="modalError" class="modal">
+    <div class="modal-content">
+      <h4 class="flow-text">Whoops!</h4>
+      <p class="flow-text">Looks like you've entered in a food type we are unfamiliar with. Please try again.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+  </div>
+
+  <!-- WINE RECOMMENDATION SECTION -->
   <div class="container white">
     <h1 class="center">Wine Gallery</h1>
     <!-- do we want a "header" or "p" below? -->
