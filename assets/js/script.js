@@ -1,4 +1,3 @@
-
 const spoonApiKey = '5bb17ff8de4a4ac48777208734e43797';
 const submitBtn = document.querySelector('.btn');
 let pairedWines=[];
@@ -73,3 +72,8 @@ function getWinePhotos () {
 
 //submit button listener
 submitBtn.addEventListener('click',buttonHandler);
+
+//Jquery to make wine cards responsive and enlarge when clicked on
+$(document).ready(function(){
+  $('.materialbox').materialbox();
+});
