@@ -103,6 +103,22 @@
     .row{
         margin-bottom:0px; /*added by Theresa for wine cards*/
     }
+    
+  /* Theresa changes */
+    .wine-image{
+        max-height: 270px;
+        min-width:100%;
+        border-radius: 15px;
+    }
+
+    .wine-name{
+        font-size: 2.5rem;
+    }
+
+    .text-box{
+        border-radius: 15px;
+    }
+    /* end Theresa changes */
 
     @media only screen and (max-width : 992px) {
     .parallax-container .section {
@@ -112,6 +128,7 @@
     #index-banner .section {
         top: 10%;
     }
+  
     }
     
     @media only screen and (max-width : 600px) {
