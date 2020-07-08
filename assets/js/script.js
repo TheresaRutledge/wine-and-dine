@@ -99,19 +99,21 @@ const getWineCards = () =>{
   for (i=0;i<pairedWines.length;i++){
 
   let columnContainerEl = document.createElement('div');
-  columnContainerEl.classList = 'col s12 m6 l4 card';
+  columnContainerEl.classList = 'col s12 m6 l4 wine-card';
 
+
+  let titleEl = document.createElement('span');
+  titleEl.classList='card-title activator grey-text text-darken-4 wine-name flow-text';
+  titleEl.textContent = pairedWines[i];
+  columnContainerEl.appendChild(titleEl);
 
   let imageEl =document.createElement('img');
-  imageEl.classList='responsive-img card materialbox';
+  imageEl.classList='responsive-img card materialbox wine-image';
   imageEl.setAttribute('alt','wine picture');
   imageEl.setAttribute('src',photoUrls[getRandom()]);
   columnContainerEl.appendChild(imageEl);
 
-  let titleEl = document.createElement('span');
-  titleEl.classList='card-title activator grey-text text-darken-4';
-  titleEl.textContent = pairedWines[i];
-  columnContainerEl.appendChild(titleEl);
+ 
 
   wineCardsContainerEl.appendChild(columnContainerEl);
   }
@@ -125,11 +127,11 @@ const getWineCards = () =>{
   wineTextColumnEl.classList = 'col s12';
 
   let wineTextCardEl = document.createElement('div');
-  wineTextCardEl.classList = 'card-panel responsive materialbox';
+  wineTextCardEl.classList = 'card-panel responsive materialbox text-box';
 
 
   let wineTextEl = document.createElement('span');
-  wineTextEl.classList ='flow-text';
+  wineTextEl.classList ='flow-text wine-text';
   wineTextEl.textContent = pairedText;
 
   wineTextCardEl.appendChild(wineTextEl);
