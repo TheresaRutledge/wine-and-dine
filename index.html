@@ -22,6 +22,17 @@
         <li>
           <a href="#recommendations">Recommendations</a>
         </li>
+        <li>
+          <img src="https://img.icons8.com/metro/26/000000/facebook-new--v2.png" class="fb" />
+        </li>
+
+        <li>
+          <img src="https://img.icons8.com/android/24/000000/twitter.png" class="twitter" />
+        </li>
+
+        <li>
+          <img src="https://img.icons8.com/material-rounded/24/000000/instagram-new.png" class=instagram />
+        </li>
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
@@ -45,21 +56,23 @@
             <!-- Empty Column -->
             <div class="col s3">
             </div>
+            <div class='row'>
+            <form onsubmit="buttonHandler(event)">
+              <div class="input-field col s6">
+                <input placeholder="Enter Dinner Selection" type="text" class="validate" id='dinner-input'>
+              </div>
 
-            <div class="input-field col s6">
-              <input placeholder="Enter Dinner Selection" type="text" class="validate" id='dinner-input'>
+              <!-- Empty Column -->
+              <div class="col s3">
+              </div>
+
+              <div class="row center"></div>
+              <div class="col s12"></div>
+              <!--  Modal Trigger / modalError & modal() added into this button feature -->
+              <button class="btn btn-primary indigo lighten-1 waves-effect waves-light"
+                type='submit'>Submit</button>
+            </form>
             </div>
-
-            <!-- Empty Column -->
-            <div class="col s3">
-            </div>
-
-            <div class="row center"></div>
-            <div class="col s12"></div>
-            <!--  Modal Trigger / modalError & modal() added into this button feature -->
-            <button data-target="modalError"
-              class="btn btn-primary indigo lighten-1 waves-effect waves-light"
-              type='submit'>Submit</button>
           </div>
         </div>
       </div>
@@ -86,50 +99,18 @@
     </div>
   </div>
 
-  <!-- Recommendations Start -->
-  <section id="recommendations">
-    <div class="content-wrapper" style="">
-      <div class="content">
-        <div class="sqs-layout sqs-grid-12 columns-12" data-type="page-section"
-          id="page-section-5d9b8e32ee4c1a6a6957e7b0">
-          <div class="row sqs-row">
-            <div class="col sqs-col-12 span-12">
-              <div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-ece90328df048d3dec51">
-                <div class="sqs-block-content">
-                  <h2>Some of Our Favorites</h2>
-                </div>
-              </div>
-              <div class="sqs-block menu-block sqs-block-menu" data-block-type="18" id="block-76bdf4a873f7f0c42d62">
-                <div class="sqs-block-content">
-                  <div class="menu-wrapper menu-style-classic">
-                    <div class="menus ">
-                      <input checked="checked" class="menu-select-button"
-                        id="menu-select-1-a09d3934-f989-4e27-a7ea-d7b6d503d42f" type="radio"
-                        name="menu-selector-a09d3934-f989-4e27-a7ea-d7b6d503d42f"
-                        onchange="applyActiveStyle('1-a09d3934-f989-4e27-a7ea-d7b6d503d42f')">
-                      <div class="menu menu-1-a09d3934-f989-4e27-a7ea-d7b6d503d42f ">
-                        <div class="menu-section">
-                          <div class="menu-items">
-                            <div class="menu-item">
 
-                              <div class="menu-item-title">Steak & Cabernet Sauvignon</div>
-                            </div>
-                            <div class="menu-item">
-                              <div class="menu-item-title">Hamburger & Syrah Shiraz</div>
-                            </div>
-                            <div class="menu-item">
-                              <div class="menu-item-title">Pasta & Primitivo</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+  <!-- Previous Search Results -->
+  <section id="previous-search">
+    <div class="search-wrapper content-wrapper center" style="">
+
+      <h2 class='previous-text'>Previous Results</h2>
+      <p class='previous-text'>Steak: Malbec, Zinfandel, Cab</p>
+
+    </div>
   </section>
+
+
   <footer class="page-footer indigo lighten-1">
     <div class="footer-container">
       © 2014 Copyright Text

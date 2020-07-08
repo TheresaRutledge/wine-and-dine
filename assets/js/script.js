@@ -3,7 +3,8 @@ const spoonApiKey = '5bb17ff8de4a4ac48777208734e43797';
 const submitBtn = document.querySelector('.btn');
 let pairedWines=[];
 let pairedText;
-let photoUrls = [];
+let winePhotoUrls = [];
+let foodPhotoUrls = [];
 let winePhotos;
 let foodInput;
 let previousSearchArr = [];
@@ -29,6 +30,8 @@ $(document).ready(function () {
 
 //functions to call when submit clicked
  const buttonHandler = (event) => {
+   console.log(event);
+  //  debugger;
     event.preventDefault();
     foodInput = document.querySelector('#dinner-input').value;
     getWinePairing();
@@ -53,34 +56,48 @@ const getWinePairing = () => {
                 pairedWines=data.pairedWines;
                 //text supplied for pairing
                 pairedText = data.pairingText;
-                getWinePhotos('wine');
+                getWinePhotos();
               }
             })
         })
         
 }
 
+//return food pics
+function getFoodPhotos () {
+  //need callback function
+  getPhotos(foodInput,foodPhotoUrls,getWineCards)
+}
+
 //fetches 10 "wine" or "steak" or "pasta" images as specified in the input parameter,
 // and stores to photoUrls
-function getWinePhotos (food) {
+function getWinePhotos () {
+
+  getPhotos('wine',winePhotoUrls,getFoodPhotos);
+  
+}
+
+const getPhotos = (keyword,array,callback) =>{
   let url = 'https://api.unsplash.com/search/photos?query='
   let client_id = '&client_id=BSXJED6UhyH4DSPVkqo8B2ThVz-Hyq083g1E7AhrR1k'
-  let fetchUrl = `${url}${food}${client_id}`
-  console.log(fetchUrl)
+  let fetchUrl = `${url}${keyword}${client_id}`
 
   fetch(fetchUrl)
     .then(function (response) {
       return response.json()
     })
     .then(function (response) {
-      winePhotos = response.results;
-      winePhotos.forEach(photo => 
-        photoUrls.push(photo.urls.regular)
-      )
-      getWineCards();
+      photos = response.results;
+      for (const photo in photos){
+        array.push(photos[photo].urls.regular)
+      }
+      if(callback){
+        callback();
+      }
     })
-  // console.log(photoUrls) //For test only
-  
+
+
+
 }
 
 const getRandom = () => {
@@ -110,7 +127,7 @@ const getWineCards = () =>{
   let imageEl =document.createElement('img');
   imageEl.classList='responsive-img card materialbox wine-image';
   imageEl.setAttribute('alt','wine picture');
-  imageEl.setAttribute('src',photoUrls[getRandom()]);
+  imageEl.setAttribute('src',winePhotoUrls[getRandom()]);
   columnContainerEl.appendChild(imageEl);
 
  
@@ -175,7 +192,7 @@ const displayPrevious = () => {
 
 
 //submit button listener
-submitBtn.addEventListener('click',buttonHandler);
+// submitBtn.addEventListener('click',buttonHandler);
 
 //Jquery to make wine cards responsive and enlarge when clicked on
 $(document).ready(function(){

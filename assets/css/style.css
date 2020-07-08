@@ -34,7 +34,7 @@
     color: white;
     }
     
-    h2 {
+    .previous-text {
     color: white
     }
     
@@ -59,13 +59,6 @@
     
     .sidenav-trigger {
     color: #9904fd;
-    }
-    
-    form{
-    background-color: grey;
-    height:75px;
-    width:50%;
-    border-radius: 15px;
     }
     
     h1{
