@@ -1,164 +1,88 @@
-/* Newest */
 nav ul a,
-nav .brand-logo {
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    color: black;
-    float: left;
-}
+    nav .brand-logo {
+        text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        color: black;
+    }
+    
+    p {
+    line-height: 2rem;
+    }
+    
+    .btn-btn-primary-rounded {
+    color:black;
+    }
+    
+    .content-wrapper{
+    background-color: #000;
+    }
 
-p {
-line-height: 2rem;
-}
+    ::placeholder {
+        color: #000;
+        opacity: 1;
+        text-align: center;
+    }
 
-.btn-btn-primary-rounded {
-color:black;
-}
+    .validate {
+        text-align: center;
+    }
 
-.btn-primary {
-    border-radius: 30px;
-}
-
-.brand-logo{
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: "Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-}
-
-.recommendations {
-    text-align: center;
-    font-family: "Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-}
-
-.fa {
-    padding-top: 5px;
-    font-size: 30px;
-    width: 45px;
-    height: 45px;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 2px;
-    border-radius: 40%;
-    float: right;
-}
-
-  
-  .fa:hover {
-      opacity: 0.7;
-  }
-  
-  .fa-facebook {
-    background: rgb(0, 0, 0);
+    input[type=text]:focus{
+        outline: 2px solid rgb(0, 0, 0);     
+    }
+    
+    .menu-item {
     color: white;
-  }
-
-  .fa-twitter {
-    background: #000000;
-    color: white;
-  }
-
-  .fa-instagram {
-    background: #000000;
-    color: white;
-  }
-
-.search-wrapper {
-    background-color: black;
-}
-
-.search {
-        justify-content: center;
-        padding-right: 3vw;
-        padding-left: 3vw;
-        display: flex;
-        font-family: "Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-        font-weight: 400;
-        font-family: freight-text-pro;
-        font-weight: 300;
-        font-style: normal;
-        letter-spacing: 0em;
-        text-transform: none;
-}
-
-.content-wrapper{
-background-color: #000;
-}
-
-::placeholder {
-    color: #000;
-    opacity: 1;
+    }
+    
+    .previous-text {
+    color: white
+    }
+    
+    .content {
+    justify-content: center;
+    padding-right: 3vw;
+    padding-left: 3vw;
+    display: flex;
+    font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    font-family: freight-text-pro;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: 0em;
+    text-transform: none;
+    }
+    
+    .menu-item {
+    font-size: 20px;
     text-align: center;
-}
+    }
+    
+    .sidenav-trigger {
+    color: #010002;
+    }
+    
+    h1{
+        text-shadow: 0 0 10px rgb(255, 255, 255);
+    }
 
-.validate {
-    text-align: center;
-}
+    h5 {
+        text-shadow: 0 0 10px rgb(255, 255, 255);
+    }
 
-input[type=text]:focus{
-    outline: 2px solid rgb(0, 0, 0);     
-}
-
-.menu-item {
-color: white;
-}
-
-h2 {
-color: white
-}
-
-.content {
-justify-content: center;
-padding-right: 3vw;
-padding-left: 3vw;
-display: flex;
-font-family: "Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-font-weight: 400;
-font-family: freight-text-pro;
-font-weight: 300;
-font-style: normal;
-letter-spacing: 0em;
-text-transform: none;
-}
-
-.menu-item {
-font-size: 20px;
-text-align: center;
-}
-
-.sidenav-trigger {
-color: #000000;
-}
-
-form{
-background-color: grey;
-height:75px;
-width:50%;
-border-radius: 15px;
-}
-
-h1{
-    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-}
-
-h5 {
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.footer-container {
-    text-align: center;
-}
-
-.parallax-container {
-min-height: 380px;
-line-height: 0;
-height: auto;
-color: rgba(255,255,255,.9);
-}
-.parallax-container .section {
-    width: 100%;
-}
-
-.icon-block {
+    .footer-container {
+        text-align: center;
+    }
+    
+    .parallax-container {
+    min-height: 380px;
+    line-height: 0;
+    height: auto;
+    color: rgba(255,255,255,.9);
+    }
+    .parallax-container .section {
+        width: 100%;
+    }
+        .icon-block {
     padding: 0 15px;
     }
     .icon-block .material-icons {
@@ -169,95 +93,87 @@ color: rgba(255,255,255,.9);
     margin: 0;
     }
 
+    .row{
+        margin-bottom:0px; /*added by Theresa for wine cards*/
+    }
+    
+  /* Theresa changes */
+    .wine-image{
+        max-height: 270px;
+        min-width:100%;
+        border-radius: 15px;
+    }
 
-/* Style inputs with type="text", select elements and textareas */
-input[type=text], select, textarea {
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding */ 
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-  }
-  
-  /* Style the submit button with a specific background color etc */
-  input[type=submit] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  /* When moving the mouse over the submit button, add a darker green color */
-  input[type=submit]:hover {
-    background-color: #45a049;
-  }
-  
-  /* Add a background color and some padding around the form */
-  .contact {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-  }
+    .wine-name{
+        font-size: 2.5rem;
+    }
 
-@media only screen and (max-width : 992px) {
-.nav-wrapper-container {
-    position: absolute;
-}
+    .text-box{
+        border-radius: 15px;
+    }
+    /* end Theresa changes */
 
-.parallax-container .section {
-    position: absolute;
-    top: 40%;
-}
-#index-banner .section {
-    top: 10%;
-}
-
-.brand-logo {
-    font-size: 10px;
-}
-
-::placeholder {
-    color: #000;
-    opacity: 1;
-    text-align: center;
-    font-size: 12px;
-}
-
-header {
-    padding-bottom: 0;
-    justify-content: center;
+    @media only screen and (max-width : 992px) {
+        .nav-wrapper-container {
+            position: absolute;
+        }
+        
+        .parallax-container .section {
+            position: absolute;
+            top: 40%;
+        }
+        #index-banner .section {
+            top: 10%;
+        }
+        
+        .brand-logo {
+            font-size: 10px;
+        }
+    
+        nav .brand-logo {
     position: relative;
-  }
-
-  header h1 {
-    width: 100%;
-    text-align: center;
-  }
-
-  header nav ul {
-    margin-top: 20px;
-    width: 100%;
-    justify-content: center;
-  }
-
-  .header1 {
-      font-size: 40px;
-  }
-
-  .header2 {
-    font-size: 16px;
-  }
+    color: #fff;
+    display: inline-block;
+    font-size: 2.1rem;
+    padding: 0;
 }
-
-@media only screen and (max-width : 600px) {
-#index-banner .section {
-    top: 0;
-}
-}
-
-
+        
+        ::placeholder {
+            color: #000;
+            opacity: 1;
+            text-align: center;
+            font-size: 12px;
+        }
+        
+        .navigation {
+            padding-bottom: 0;
+            justify-content: center;
+            position: relative;
+          }
+        
+          header h1 {
+            width: 100%;
+            text-align: center;
+          }
+        
+          header nav ul {
+            margin-top: 20px;
+            width: 100%;
+            justify-content: center;
+          }
+        
+          .header1 {
+              font-size: 40px;
+          }
+        
+          .header2 {
+            font-size: 16px;
+          }
+        }
+        
+        @media only screen and (max-width : 600px) {
+        #index-banner .section {
+            top: 0;
+        }
+        }
+        
