@@ -55,7 +55,7 @@ const getWinePairing = () => {
             //text supplied for pairing
             pairedText = data.pairingText;
             getWinePhotos();
-            getFoodPhotos()
+            
           }
         })
     })
@@ -65,14 +65,14 @@ const getWinePairing = () => {
 //return food pics
 function getFoodPhotos() {
   //need callback function
-  getPhotos(foodInput, foodPhotoUrls, getFoodPhotos);
+  getPhotos(foodInput, foodPhotoUrls, getFoodCards);
 }
 
 //fetches 10 "wine" or "steak" or "pasta" images as specified in the input parameter,
 // and stores to photoUrls
 function getWinePhotos() {
 
-  getPhotos('wine', winePhotoUrls, getWinePhotos);
+  getPhotos('wine', winePhotoUrls, getFoodPhotos);
 
 }
 
@@ -163,7 +163,6 @@ const getWineCards = () => {
 //food picture function goes here
 const getFoodCards = () => {
   let foodCardsContainerEl = document.querySelector('#food-card-container')
-  debugger
   foodCardsContainerEl.innerHTML = ''
   for (i = 0; i < 3; i++) {
     let columnContainerEl = document.createElement('div')
@@ -178,12 +177,8 @@ const getFoodCards = () => {
     foodCardsContainerEl.appendChild(columnContainerEl)
   }
 
-  foodTextCardEl.appendChild(foodTextEl)
-  foodTextColumnEl.appendChild(foodTextCardEl)
-  textRowEl.appendChild(foodTextColumnEl)
-  textContainerEl.appendChild(textRowEl)
-
-  foodCardsContainerEl.appendChild(textContainerEl)
+  foodPhotoUrls =[];
+  getWineCards();
 }
 
 //saves last three searches and thier pairings to local storage
