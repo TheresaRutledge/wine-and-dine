@@ -55,6 +55,7 @@ const getWinePairing = () => {
             //text supplied for pairing
             pairedText = data.pairingText;
             getWinePhotos();
+            getFoodPhotos()
           }
         })
     })
@@ -64,14 +65,14 @@ const getWinePairing = () => {
 //return food pics
 function getFoodPhotos() {
   //need callback function
-  getPhotos(foodInput, foodPhotoUrls, getWineCards)
+  getPhotos(foodInput, foodPhotoUrls, getFoodPhotos);
 }
 
 //fetches 10 "wine" or "steak" or "pasta" images as specified in the input parameter,
 // and stores to photoUrls
 function getWinePhotos() {
 
-  getPhotos('wine', winePhotoUrls, getFoodPhotos);
+  getPhotos('wine', winePhotoUrls, getWinePhotos);
 
 }
 
@@ -160,7 +161,30 @@ const getWineCards = () => {
 }
 
 //food picture function goes here
+const getFoodCards = () => {
+  let foodCardsContainerEl = document.querySelector('#food-card-container')
+  debugger
+  foodCardsContainerEl.innerHTML = ''
+  for (i = 0; i < 3; i++) {
+    let columnContainerEl = document.createElement('div')
+    columnContainerEl.classList = 'col s12 m6 l4 wine-card'
 
+    let imageEl = document.createElement('img')
+    imageEl.classList = 'responsive-img card materialbox wine-image'
+    imageEl.setAttribute('alt', 'Food picture')
+    imageEl.setAttribute('src', foodPhotoUrls[getRandom()])
+    columnContainerEl.appendChild(imageEl)
+
+    foodCardsContainerEl.appendChild(columnContainerEl)
+  }
+
+  foodTextCardEl.appendChild(foodTextEl)
+  foodTextColumnEl.appendChild(foodTextCardEl)
+  textRowEl.appendChild(foodTextColumnEl)
+  textContainerEl.appendChild(textRowEl)
+
+  foodCardsContainerEl.appendChild(textContainerEl)
+}
 
 //saves last three searches and thier pairings to local storage
 const saveToStorage = () => {
