@@ -1,4 +1,4 @@
-    nav ul a,
+nav ul a,
     nav .brand-logo {
         text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
         color: black;
@@ -27,7 +27,7 @@
     }
 
     input[type=text]:focus{
-        outline: 2px solid rgb(126, 38, 228);     
+        outline: 2px solid rgb(0, 0, 0);     
     }
     
     .menu-item {
@@ -58,15 +58,15 @@
     }
     
     .sidenav-trigger {
-    color: #9904fd;
+    color: #010002;
     }
     
     h1{
-        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        text-shadow: 0 0 10px rgb(255, 255, 255);
     }
 
     h5 {
-        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        text-shadow: 0 0 10px rgb(255, 255, 255);
     }
 
     .footer-container {
@@ -114,20 +114,66 @@
     /* end Theresa changes */
 
     @media only screen and (max-width : 992px) {
-    .parallax-container .section {
-        position: absolute;
-        top: 40%;
-    }
-    #index-banner .section {
-        top: 10%;
-    }
-  
-    }
+        .nav-wrapper-container {
+            position: absolute;
+        }
+        
+        .parallax-container .section {
+            position: absolute;
+            top: 40%;
+        }
+        #index-banner .section {
+            top: 10%;
+        }
+        
+        .brand-logo {
+            font-size: 10px;
+        }
     
-    @media only screen and (max-width : 600px) {
-    #index-banner .section {
-        top: 0;
-    }
-    }
-    
-   
+        nav .brand-logo {
+    position: relative;
+    color: #fff;
+    display: inline-block;
+    font-size: 2.1rem;
+    padding: 0;
+}
+        
+        ::placeholder {
+            color: #000;
+            opacity: 1;
+            text-align: center;
+            font-size: 12px;
+        }
+        
+        .navigation {
+            padding-bottom: 0;
+            justify-content: center;
+            position: relative;
+          }
+        
+          header h1 {
+            width: 100%;
+            text-align: center;
+          }
+        
+          header nav ul {
+            margin-top: 20px;
+            width: 100%;
+            justify-content: center;
+          }
+        
+          .header1 {
+              font-size: 40px;
+          }
+        
+          .header2 {
+            font-size: 16px;
+          }
+        }
+        
+        @media only screen and (max-width : 600px) {
+        #index-banner .section {
+            top: 0;
+        }
+        }
+        
