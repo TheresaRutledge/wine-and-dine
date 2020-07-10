@@ -183,6 +183,11 @@ const getFoodCards = () => {
 
 //saves last three searches and thier pairings to local storage
 const saveToStorage = () => {
+  for(i=0;i<previousSearchArr.length;i++){
+    if(previousSearchArr[i].food === foodInput){
+      return;
+    }
+  }
   previousSearchArr.unshift(
     {
       food: foodInput,
