@@ -1,179 +1,246 @@
 nav ul a,
-    nav .brand-logo {
-        text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-        color: black;
-    }
-    
-    p {
-    line-height: 2rem;
-    }
-    
-    .btn-btn-primary-rounded {
-    color:black;
-    }
-    
-    .content-wrapper{
-    background-color: #000;
-    }
+nav .brand-logo {
+text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+color: black;
+}
 
-    ::placeholder {
-        color: #000;
-        opacity: 1;
-        text-align: center;
-    }
+p {
+line-height: 2rem;
+}
 
-    .validate {
-        text-align: center;
-    }
+.btn-btn-primary-rounded {
+color:black;
+}
 
-    input[type=text]:focus{
-        outline: 2px solid rgb(0, 0, 0);     
-    }
-    
-    .menu-item {
-    color: white;
-    }
-    
-    .previous-text {
-    color: white
-    }
-    
-    .content {
-    justify-content: center;
-    padding-right: 3vw;
-    padding-left: 3vw;
-    display: flex;
-    font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 400;
-    font-family: freight-text-pro;
-    font-weight: 300;
-    font-style: normal;
-    letter-spacing: 0em;
-    text-transform: none;
-    }
-    
-    .menu-item {
-    font-size: 20px;
-    text-align: center;
-    }
-    
-    .sidenav-trigger {
-    color: #010002;
-    }
-    
-    h1{
-        text-shadow: 0 0 10px rgb(255, 255, 255);
-    }
+.content-wrapper{
+background-color: #000;
+}
 
-    h5 {
-        text-shadow: 0 0 10px rgb(255, 255, 255);
-    }
+::placeholder {
+color: #000;
+opacity: 1;
+text-align: center;
+}
 
-    .footer-container {
-        text-align: center;
-    }
-    
-    .parallax-container {
-    min-height: 380px;
-    line-height: 0;
-    height: auto;
-    color: rgba(255,255,255,.9);
-    }
-    .parallax-container .section {
-        width: 100%;
-    }
-        .icon-block {
-    padding: 0 15px;
-    }
-    .icon-block .material-icons {
-    font-size: inherit;
-    }
-    
-    footer.page-footer {
-    margin: 0;
-    }
+.validate {
+text-align: center;
+}
 
-    .row{
-        margin-bottom:0px; /*added by Theresa for wine cards*/
-    }
-    
-  /* Theresa changes */
-    .wine-image{
-        max-height: 270px;
-        min-width:100%;
-        border-radius: 15px;
-    }
+input[type=text]:focus{
+outline: 2px solid rgb(0, 0, 0);     
+}
 
-    .wine-name{
-        font-size: 2.5rem;
-    }
+.menu-item {
+color: white;
+}
 
-    .text-box{
-        border-radius: 15px;
-    }
-    /* end Theresa changes */
+.previous-text {
+color: white;
+}
 
-    @media only screen and (max-width : 992px) {
-        .nav-wrapper-container {
-            position: absolute;
-        }
-        
-        .parallax-container .section {
-            position: absolute;
-            top: 40%;
-        }
-        #index-banner .section {
-            top: 10%;
-        }
-        
-        .brand-logo {
-            font-size: 10px;
-        }
-    
-        nav .brand-logo {
+.content {
+justify-content: center;
+padding-right: 3vw;
+padding-left: 3vw;
+display: flex;
+font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+font-weight: 400;
+font-family: freight-text-pro;
+font-weight: 300;
+font-style: normal;
+letter-spacing: 0em;
+text-transform: none;
+}
+
+.menu-item {
+font-size: 20px;
+text-align: center;
+}
+
+.sidenav-trigger {
+color: #010002;
+}
+
+h1{
+text-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+h5 {
+text-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+.footer-container {
+text-align: center;
+}
+
+.parallax-container {
+min-height: 380px;
+line-height: 0;
+height: auto;
+color: rgba(255,255,255,.9);
+}
+
+.parallax-container .section {
+width: 100%;
+}
+
+.icon-block {
+padding: 0 15px;
+}
+
+.icon-block .material-icons {
+font-size: inherit;
+}
+
+footer.page-footer {
+margin: 0;
+}
+
+/* Added by Theresa for wine cards */
+.row{
+margin-bottom:0px; 
+}
+
+/* Theresa changes */
+.wine-image{
+max-height: 270px;
+min-width:100%;
+border-radius: 15px;
+}
+
+.wine-name{
+font-size: 2rem;
+}
+
+.text-box{
+border-radius: 15px;
+}
+
+/* Start New Additions */
+body {
+display: flex;
+min-height: 100vh;
+flex-direction: column;
+background-color: white;
+}
+
+main {
+flex: 1 0 auto;
+}
+
+.icons{
+padding-left: 20px;
+margin-top: 18px;
+}
+
+#instagram.icons{
+padding-right: 20px;
+}
+
+input[type=text]:not(.browser-default) {
+background-color: white;
+border-bottom: 1px solid #4CAF50;
+-webkit-box-shadow: 0 1px 0 0 #4CAF50;
+box-shadow: 0 1px 0 0 #4CAF50;
+}
+
+/* Added to adjust Main background and fill screen */
+.parallax-container {
+height: 380px;
+min-height: 515px;
+}
+
+/* Changed to make the PR section fit better */
+h2 {
+font-size: 2.56rem;
+}
+
+/* adding padding around cards */
+img.responsive-img, video.responsive-video {
+ margin-top: 10%;
+}
+
+.text-box {
+ margin-bottom: 5%;;
+}
+
+.page-footer{
+/* position: fixed; */
+padding-top: 0;
+left: 0;
+bottom: 0;
+width: 100%;
+background-color: red;
+color: white;
+text-align: center;
+}
+/* End New Additions */
+
+
+@media only screen and (max-width : 992px) {
+  .nav-wrapper-container {
+    position: absolute;
+  }
+
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  
+  #index-banner .section {
+    top: 10%;
+  }
+
+  .brand-logo {
+    font-size: 10px;
+  }
+
+  nav .brand-logo {
     position: relative;
-    color: #fff;
+    color: #000;
     display: inline-block;
     font-size: 2.1rem;
     padding: 0;
+  }
+      
+  ::placeholder {
+    color: #000;
+    opacity: 1;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .navigation {
+    padding-bottom: 0;
+    justify-content: center;
+    position: relative;
+    }
+
+  header h1 {
+    width: 100%;
+    text-align: center;
+  }
+
+  header nav ul {
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .header1 {
+    font-size: 40px;
+  }
+
+  .header2 {
+    font-size: 16px;
+  }
+  
 }
-        
-        ::placeholder {
-            color: #000;
-            opacity: 1;
-            text-align: center;
-            font-size: 12px;
-        }
-        
-        .navigation {
-            padding-bottom: 0;
-            justify-content: center;
-            position: relative;
-          }
-        
-          header h1 {
-            width: 100%;
-            text-align: center;
-          }
-        
-          header nav ul {
-            margin-top: 20px;
-            width: 100%;
-            justify-content: center;
-          }
-        
-          .header1 {
-              font-size: 40px;
-          }
-        
-          .header2 {
-            font-size: 16px;
-          }
-        }
-        
-        @media only screen and (max-width : 600px) {
-        #index-banner .section {
-            top: 0;
-        }
-        }
-        
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+    }
+}
+
+
