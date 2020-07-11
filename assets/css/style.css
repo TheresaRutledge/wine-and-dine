@@ -74,8 +74,8 @@ text-align: center;
 }
 
 .parallax-container {
-min-height: 380px;
-line-height: 0;
+/* min-height: 380px; */
+/* line-height: 0; */
 height: auto;
 color: rgba(255,255,255,.9);
 }
@@ -146,8 +146,8 @@ box-shadow: 0 1px 0 0 #4CAF50;
 
 /* Added to adjust Main background and fill screen */
 .parallax-container {
-height: 380px;
-min-height: 515px;
+height: 100%;
+min-height: 552px;
 }
 
 /* Changed to make the PR section fit better */
@@ -161,12 +161,12 @@ img.responsive-img, video.responsive-video {
 }
 
 .text-box {
- margin-bottom: 5%;;
+ margin-bottom: 5%;
 }
 
 .page-footer{
 /* position: fixed; */
-padding-top: 0;
+padding-top: 0px;
 left: 0;
 bottom: 0;
 width: 100%;
@@ -174,8 +174,15 @@ background-color: red;
 color: white;
 text-align: center;
 }
-/* End New Additions */
 
+.page-footer .footer-copyright {
+min-height: 60px;
+}
+/* End New Additions */
+@media only screen and (min-width: 993px) {
+.container {
+    width: 100%;
+}
 
 @media only screen and (max-width : 992px) {
   .nav-wrapper-container {
@@ -241,6 +248,7 @@ text-align: center;
   #index-banner .section {
     top: 0;
     }
+    
 }
 
 
