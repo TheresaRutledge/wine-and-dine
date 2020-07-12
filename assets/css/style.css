@@ -74,8 +74,6 @@ text-align: center;
 }
 
 .parallax-container {
-/* min-height: 380px; */
-/* line-height: 0; */
 height: auto;
 color: rgba(255,255,255,.9);
 }
@@ -96,12 +94,10 @@ footer.page-footer {
 margin: 0;
 }
 
-/* Added by Theresa for wine cards */
 .row{
 margin-bottom:0px; 
 }
 
-/* Theresa changes */
 .wine-image{
 max-height: 270px;
 min-width:100%;
@@ -116,7 +112,6 @@ font-size: 2rem;
 border-radius: 15px;
 }
 
-/* Start New Additions */
 body {
 display: flex;
 min-height: 100vh;
@@ -165,7 +160,6 @@ img.responsive-img, video.responsive-video {
 }
 
 .page-footer{
-/* position: fixed; */
 padding-top: 0px;
 left: 0;
 bottom: 0;
@@ -182,6 +176,7 @@ min-height: 60px;
 @media only screen and (min-width: 993px) {
 .container {
     width: 100%;
+}
 }
 
 @media only screen and (max-width : 992px) {
@@ -247,6 +242,5 @@ min-height: 60px;
 @media only screen and (max-width : 600px) {
   #index-banner .section {
     top: 0;
-    }
-    
+    } 
 }
