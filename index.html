@@ -3,75 +3,87 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Wine & Dine</title>
 
-  <!-- Compiled and minified CSS -->
+  <!-- Compiled and Minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="./assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
 </head>
 
 <body>
 
-  <nav class="navigation white">
-    <div class="nav-wrapper-container">
-      <a id="logo-container" href="#" class="brand-logo black-text center">Wine & Dine</a>
-      <ul class="right hide-on-med-and-down">
-        <li>
-          <a href="#recommendations">Previous Recommendations</a>
-        </li>
-        <li>
-          <img src="https://img.icons8.com/metro/26/000000/facebook-new--v2.png" class="fb" />
-        </li>
+  <!-- NAVBAR and HEADER SECTION -->
+  <div class="navbar-fixed">
+    <nav class="white">
+      <div class="nav-wrapper-container">
+        <a href="index.html" class="brand-logo"><i class="material-icons"></i>Wine & Dine</a>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="https://www.facebook.com/"target="_blank"><img src="https://img.icons8.com/metro/26/000000/facebook-new--v2.png" id="fb" class="icons" /></a></li>
+          <li><a href="https://www.twitter.com"target="_blank"><img src="https://img.icons8.com/android/24/000000/twitter.png" id="twitter" class="icons" /></a></li>
+          <li><a href="https://www.instagram.com"target="_blank"><img src="https://img.icons8.com/material-rounded/24/000000/instagram-new.png" id="instagram" class="icons" /></a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
 
-        <li>
-          <img src="https://img.icons8.com/android/24/000000/twitter.png" class="twitter" />
-        </li>
+  <!-- NavBar Mobile Dropdown -->
+  <ul class="sidenav" id="nav-mobile">
+    <li class="active"><a href="index.html"><i class="material-icons left"></i>Wine & Dine</a></li>
+    <li>
+      <div class="user-view">
+        <div class="background">
+          <img src="./assets/images/homepage-background.jpg">
+        </div>
+        <a href="#user">
+          <a class="gallery-cover gray">
+            <img class="responsive-img" src="http://placehold.it/200x150" alt="placeholder">
+          </a>
+          <a href="#name"><span class="black-text name">User Name</span></a>
+          <a href="#email"><span class="black-text email">UserName@gmail.com</span></a>
+      </div>
+    </li>
+    <li>
+    <div class="divider"></div>
+    <li><a href="#sacred">Previous Recommendations</a></li>
+    <li><a href="index-dark.html"><i class="material-icons">wine_bar</i>Wine 1</a></li>
+    <li><a href="index-dark.html"><i class="material-icons">wine_bar</i>Wine 2</a></li>
+    <li><a href="index-dark.html"><i class="material-icons">wine_bar</i>Wine 3</a></li>
+    <li><a href="index-dark.html"><i class="material-icons">wine_bar</i>Wine 4</a></li>
+    </li>
+  </ul>
 
-        <li>
-          <img src="https://img.icons8.com/material-rounded/24/000000/instagram-new.png" class=instagram />
-        </li>
-      </ul>
-
-      <ul id="nav-mobile" class="sidenav">
-        <li>
-          <a href="#recommendations">Previous Recommendations</a>
-        </li>
-      </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
-
+  <!-- MAIN IMAGE & MEAL INPUT SECTION -->
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
         <h1 class="header1 center light black-text text-darken-2"><strong>What's for Dinner?</strong></h1>
         <div class="row center">
-          <h5 class="header2 col s12 black-text text-darken-2"><strong>Our website pairs different types of wine
-              depending on your dinner selection</strong></h5>
+          <h5 class="header2 col s12 black-text text-darken-2"><strong>Let us help you find the best wine pairing for your meal</strong></h5>
+
+          <!-- Empty Column Spacer-->
           <div class="row">
-            <!-- Empty Column -->
-            <div class="col s3">
-            </div>
+            <div class="col s3"></div>
+
+            <!-- Submit Button -->
             <div class='row'>
-            <form onsubmit="buttonHandler(event)">
-              <div class="input-field col s6">
-                <input placeholder="Enter Dinner Selection" type="text" class="validate" id='dinner-input'>
-              </div>
+              <form onsubmit="buttonHandler(event)">
+                <div class="input-field col s6">
+                  <input placeholder="Enter your meal" type="text" class="validate" id='dinner-input'>
+                </div>
 
-              <!-- Empty Column -->
-              <div class="col s3">
-              </div>
+                <!-- Empty Column Spacer -->
+                <div class="col s3"></div>
+                <div class="row center"></div>
+                <div class="col s12"></div>
 
-              <div class="row center"></div>
-              <div class="col s12"></div>
-              <!--  Modal Trigger / modalError & modal() added into this button feature -->
-              <button class="btn btn-primary indigo lighten-1 waves-effect waves-light"
-                type='submit'>Submit</button>
-            </form>
+                <!--  Modal Trigger / modalError & modal() added into this button feature -->
+                <button class="btn btn-large btn-primary indigo lighten-1 waves-effect waves-light" type='submit'>Submit</button>
+              </form>
             </div>
           </div>
         </div>
@@ -80,52 +92,59 @@
     <div class="parallax"><img src="./assets/images/homepage-background.jpg" alt="Unsplashed background img 1"></div>
   </div>
 
-  <!-- Food picture section -->
-  <div class="container white">
-   <div class="row" id='food-card-container'>
-   </div>
-  </div>
-
-  <!-- MODAL ERROR SECTION -->
-  <div id="modalError" class="modal">
-    <div class="modal-content">
-      <h4 class="flow-text">Whoops!</h4>
-      <p class="flow-text">Looks like you've entered in a food type we are unfamiliar with. Please try again.</p>
+  <main>
+    <!-- FOOD PHOTO SECTION -->
+    <div class="container white">
+      <div class="col l12  m12 s12">
+        <div class="row" id="food-card-container"></div>
+      </div>
     </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-light indigo lighten-1 btn">Close</a>
+
+    <!-- MODAL ERROR SECTION -->
+    <div id="modalError" class="modal">
+      <div class="modal-content">
+        <h4 class="flow-text">Whoops!</h4>
+        <p class="flow-text">Looks like you've entered in a food type we are unfamiliar with. Please try again.</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-light indigo lighten-1 btn">Close</a>
+      </div>
     </div>
-  </div>
 
-  <!-- WINE RECOMMENDATION SECTION -->
-  <div class="container white">
-    <div class="row" id='wine-card-container'>
+    <!-- WINE RECOMMENDATION SECTION -->
+    <div class="container white">
+      <div class="col l12  m12 s12">
+        <div class="row" id="wine-card-container"></div>
+      </div>
     </div>
-  </div>
 
+  </main>
 
-  <!-- Previous Search Results -->
-  <section id="previous-search">
-    <div class="search-wrapper content-wrapper center" style="" id='previous-container'>
-
-      <h2 class='previous-text'>Previous Recommendations</h2>
-      <!-- <p class='previous-text'>Steak: Malbec, Zinfandel, Cab</p> -->
-
+  <!-- PREVIOUS SEARCH SECTION -->
+  <footer class="page-footer black">
+    <div class="container">
+      <div class="row">
+        <div class="col l12  m12 s12 black">
+          <section id="previous-search">
+            <div class="search-wrapper content-wrapper center" style="" id="previous-container">
+              <h3 class="previous-text">Previous Recommendations</h3>
+            </div>
+          </section>
+        </div>
+      </div>
     </div>
-  </section>
 
-
-  <footer class="page-footer indigo lighten-1">
-    <div class="footer-container">
-      © 2014 Copyright Text
+    <!-- FOOTER SECTION-->
+    <div class="footer-copyright indigo lighten-1">
+      <div class="container center">© 2020 Made by TEAM5</div>
     </div>
   </footer>
-
 
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="./assets/js/script.js"></script>
+
 </body>
 
 </html>

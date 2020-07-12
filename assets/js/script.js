@@ -1,4 +1,3 @@
-
 const spoonApiKey = '5bb17ff8de4a4ac48777208734e43797';
 const submitBtn = document.querySelector('.btn');
 let pairedWines = [];
@@ -14,19 +13,21 @@ let previousSearchArr = [];
   $(function () {
     $('.sidenav').sidenav();
     $('.parallax').parallax();
-
   }); // end of document ready
 })(jQuery); // end of jQuery name space
+
 
 //SEARCH BAR
 $(document).ready(function () {
   $('.sidenav').sidenav()
 })
 
+
 //SELECT BAR
 $(document).ready(function () {
   $('select').formSelect()
 })
+
 
 //functions to call when submit clicked
 const buttonHandler = (event) => {
@@ -39,6 +40,7 @@ const openModal = () => {
   $('.modal').modal();
   $('#modalError').modal('open');
 }
+
 
 //fetches wine pairing and text
 const getWinePairing = () => {
@@ -55,12 +57,12 @@ const getWinePairing = () => {
             //text supplied for pairing
             pairedText = data.pairingText;
             getWinePhotos();
-            
           }
         })
     })
 
 }
+
 
 //return food pics
 function getFoodPhotos() {
@@ -68,12 +70,12 @@ function getFoodPhotos() {
   getPhotos(foodInput, foodPhotoUrls, getFoodCards);
 }
 
+
 //fetches 10 "wine" or "steak" or "pasta" images as specified in the input parameter,
 // and stores to photoUrls
 function getWinePhotos() {
 
   getPhotos('wine', winePhotoUrls, getFoodPhotos);
-
 }
 
 const getPhotos = (keyword, array, callback) => {
@@ -95,14 +97,14 @@ const getPhotos = (keyword, array, callback) => {
       }
     })
 
-
-
 }
 
 const getRandom = () => {
   let num = Math.floor(Math.random() * 10);
   return num;
+
 }
+
 
 //based on paired wines returned this function will create a card for each wine with a picture and the wine varietal
 const getWineCards = () => {
@@ -117,7 +119,6 @@ const getWineCards = () => {
     let columnContainerEl = document.createElement('div');
     columnContainerEl.classList = 'col s12 m6 l4 wine-card';
 
-
     let titleEl = document.createElement('span');
     titleEl.classList = 'card-title activator grey-text text-darken-4 wine-name flow-text';
     titleEl.textContent = pairedWines[i];
@@ -129,10 +130,11 @@ const getWineCards = () => {
     imageEl.setAttribute('src', winePhotoUrls[getRandom()]);
     columnContainerEl.appendChild(imageEl);
 
-
-
     wineCardsContainerEl.appendChild(columnContainerEl);
+
   }
+
+
   let textContainerEl = document.createElement('div');
   textContainerEl.classList = 'container';
 
@@ -144,7 +146,6 @@ const getWineCards = () => {
 
   let wineTextCardEl = document.createElement('div');
   wineTextCardEl.classList = 'card-panel responsive materialbox text-box';
-
 
   let wineTextEl = document.createElement('span');
   wineTextEl.classList = 'flow-text wine-text';
@@ -158,7 +159,9 @@ const getWineCards = () => {
   wineCardsContainerEl.appendChild(textContainerEl);
 
   saveToStorage();
+
 }
+
 
 //food picture function goes here
 const getFoodCards = () => {
@@ -179,7 +182,9 @@ const getFoodCards = () => {
 
   foodPhotoUrls =[];
   getWineCards();
+
 }
+
 
 //saves last three searches and thier pairings to local storage
 const saveToStorage = () => {
@@ -201,6 +206,7 @@ const saveToStorage = () => {
   loadFromStorage();
 }
 
+
 //load from local storage
 const loadFromStorage = () => {
   let newArr = JSON.parse(localStorage.getItem('previousSearch'));
@@ -209,6 +215,7 @@ const loadFromStorage = () => {
     displayPrevious();
   }
 }
+
 
 //display previous searches
 const displayPrevious = () => {
@@ -245,5 +252,3 @@ $(document).ready(function () {
 });
 
 loadFromStorage();
-
-
