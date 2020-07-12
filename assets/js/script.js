@@ -252,5 +252,3 @@ $(document).ready(function () {
 });
 
 loadFromStorage();
-
-
